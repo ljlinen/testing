@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gmail API Quickstart</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style/style.css">
+  </head>
+  <body>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <body>
+      <div class="header">
+        <p class="txt-1">Welcome</p>
+        <p class="txt-2">Admin Panel</p>
+      </div>
+      <div class="body">
+        
+        <div class="head">
+          <p class="txt-3">Login</p>
+        </div>
+        
+        <div class="login-div">
+          <div class="wrap">
+            <div class="wrap">
+              <label class="label" for="name">email:</label>
+            </div>
+            <div class="wrap">
+              <input type="email" class="input-input">
+            </div>
+          </div>
+          
+          <div class="wrap">
+            <div class="wrap">
+              <label class="label" for="name">password:</label>
+            </div>
+            <div class="wrap">
+              <input type="password" class="input-input">
+            </div>
+          </div>
+          
+          <div class="wrap">
+              <input type="button" class="input-btn" value="sign in">
+            </div>
+        </div>
+
+        
+        
+      </div>
+
+      <div class="teamview">
+
+          <div class="body">
+            <div class="wrap-connect">
+                  <div class="wrap">
+                    <label class="label" for="name">connect</label>
+                  </div>
+                  
+                  <div class="wrap-connect-btns">
+                    <input type="button" id="fb-auth-btn" class="input-btn" value="facebook page">
+                    <input type="button" id="g-auth-btn" class="input-btn" value="gmail">
+                  </div>
+            </div>
+          </div>
+
+          <div class="body-2">
+
+            <div class="teammember">
+              <div class="wrap-n">
+              <p class="txt-t txtTeamName">Name</p>
+              </div>
+              <div class="wrap-e">
+                <p class="txt-t txtTeamEmail">Email</p>
+              </div>
+              <div class="wrap-g">
+                <p class="txt-t txtTeamGetMail">Send Mail</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="body-3">
+            <div class="new-member">
+            
+              <div class="wrap">
+              <div class="wrap">
+                <label class="label" for="name">name:</label>
+              </div>
+              
+              <div class="wrap">
+                <input type="text" id="add-member-name" class="input-input">
+              </div>
+              
+            </div>
+            
+                      <div class="wrap">
+              <div class="wrap">
+                <label class="label" for="name">email:</label>
+              </div>
+              <div class="wrap">
+                <input type="text" id="add-member-email" class="input-input">
+              </div>
+            </div>
+
+            <div class="wrap-add-btn">
+              <img src="./style/add.svg" id="add-member-email" />
+            </div>
+
+            </div>
+              
+            </div>
+            <div class="wrap">
+              <input type="button" id="cancel" class="input-btn" value="cancel">
+            </div>
+
+            <div class="wrap">
+              <input type="button" id="save" class="input-btn" value="Save">
+            </div>
+
+          </div>
+          
+        </div>
+
+      <div class="footer">
+        <p class="txt-footer">Copyright &copy; 2023 all rights reservesd</p>
+      </div>
+      
+      <script type="module" src="./requests.js"></script>
+      <script type="module" src="./script.js"></script>
+      <script type="module" src="./handleUI.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script type="module" src="./auth.js"></script>
+    </body>
+  </body>
+</html>

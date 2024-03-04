@@ -1,0 +1,323 @@
+@font-face {
+  font-family: Inria;
+  src: url('./InriaSans-Regular.ttf');
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+    font-family: Inria;
+    font-size: 1.6rem;
+    color: #0B1727;
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+    user-select: none;
+}
+
+.toastify {
+  position: fixed;
+  animation: 1s topToBottom ease-in-out;
+  left: 50vw;
+  color: #fff;
+  background-color: #a743ee;
+  padding: 5px;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  font-family: Inria;
+}
+.oc70 {
+  opacity: 0.64;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  animation: 0.5s bob ease-out;
+  padding: 18px 0;
+}
+.txt-1 {
+  font-weight: 600;
+  font-size: 3rem;
+  transition: 2s ease-out;
+}
+.txt-2 {
+  font-weight: 300;
+  font-size: 1.8rem;
+  transition: 2s ease-in-out;
+  filter: contrast(0.01);
+}
+.txt-3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  padding: 0px 10px;
+}
+.label {
+  font-size: 1.5rem;
+  filter: contrast(0.05);
+  font-weight: 300;
+}
+
+.txtTeamName,
+.txtTeamEmail,
+.txtTeamGetMail {
+  font-size: 1.4rem;
+  opacity: 0.8;
+  font-weight: 300;
+  padding: 8px;
+}
+
+.txt-footer {
+  font-family: 800;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+.head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.body,
+.body-2,
+.body-3 {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid #0B172785; */
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0px 0px 4px 1.05px #0000001c;
+  animation: 1s bob ease-in-out;
+  gap: 5px;
+  background-color: #fbfbfb96;
+}
+
+.input-input {
+  outline: none;
+  padding: 4px;
+  opacity: 0.8;
+  border: none;
+  border-bottom: 1px solid #3c3c3c4a;
+  background-color: #fbfbfb96;
+}
+
+.input-btn {
+  display: flex;
+  outline: none;
+  padding: 4px;
+  border: none;
+  background-color: #a743ee;
+  box-shadow: 0px 0px 5px 2px #0b17271f;
+  color: #fff;
+  border-radius: 3px;
+  width: 80px;
+  transition: all 0.3s ease-in-out;
+  align-items: center;
+  justify-content: center;
+}
+#save {
+  opacity: 0.6;
+}
+.wrap-connect {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.wrap-connect-btns .input-btn {
+  background-color: #240067;
+  width: min-content;
+  padding: 5px;
+}
+
+.wrap-connect-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.input-btn:hover,
+.wrap-add-btn:hover {
+  filter: brightness(1.5);
+}
+
+.login-div {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 5px;
+}
+#cancel {
+  display: none;
+}
+
+.teammember {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  border-radius: 4px;
+  transition: 0.2s ease-in-out;
+  justify-content: space-between;
+}
+
+.teammember:hover {
+  transform: scale(1.01);
+}
+
+.footer {
+  height: min-content;
+  display: flex;
+  justify-content: center;
+}
+
+.txt-t {
+  font-weight: 600;
+}
+
+.wrap-add-btn {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  background-color: #a743ee;
+  margin: 4px;
+  opacity: 0.9;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.teamview .wrap .input-btn{
+  float: right;
+}
+
+.new-member {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrap-cont {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.wrap-i {
+  display: flex;
+  justify-items: center;
+}
+
+/* Switch */
+
+.wrap-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider,
+.input-input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider,
+.input-input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before,
+.input-input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+@keyframes bob {
+  0% {opacity: 0.1;}
+  100% {opacity: 0.99;}
+}
+@keyframes fromleft {
+  0% {transform: translateX(-100vw);}
+  100% {transform: translateX(0);}
+}
+
+@keyframes topToBottom {
+  0% {opacity: 0.1; transform: translateY(-100vh)}
+  100% {opacity: 0.99; transform: translateY(0)}
+}
