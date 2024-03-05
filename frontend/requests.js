@@ -1,9 +1,11 @@
 import { SerializeData } from "./Global.js";
 
+const serverport = '4000';
+
 export async function getData(endpoint) {
 
-    let response = await fetch('http://localhost:3000/home/' + endpoint);
-
+    let response = await fetch(`http://localhost:${serverport}/home/` + endpoint);
+    console.log(response);
     if (response.ok) {
         console.log(response.body);
         return response.json();
@@ -23,7 +25,7 @@ export async function postData(endpoint, data) {
     };
 
     try {
-    let response = await fetch('http://localhost:3000/home/' + endpoint, options);
+    let response = await fetch(`http://localhost:${serverport}/home/` + endpoint, options);
     console.log('put response' + response.body);
     
     } catch (error) {
@@ -46,7 +48,7 @@ export async function putData(endpoint, data) {
     };
 
     try {
-        let response = await fetch('http://localhost:3000/home/' + endpoint, options);
+        let response = await fetch(`http://localhost:${serverport}/home/` + endpoint, options);
         console.log('put response' + response.body);
 
         return response; // Return parsed JSON response

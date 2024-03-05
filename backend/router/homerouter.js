@@ -30,7 +30,7 @@ routerhome.get('/admin', async (req, res) => {
     try {
         const dbdata = await fetchData.fetchData('SELECT email, password FROM team WHERE name = "admin"');
         if (dbdata && dbdata.length > 0) {
-            //console.log('Data fetched:', dbdata);
+            console.log('Data fetched:', dbdata);
             res.status(200).json(dbdata[0]);
         } else {
             //console.log(dbdata)
