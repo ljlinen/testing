@@ -1,10 +1,9 @@
 import { SerializeData } from "./Global.js";
 
-
 let envport = '';
-let envport = '';
+let envhost = '';
 
-fetch('./env.json')
+await fetch('./env.json')
    .then(response => {
      if (!response.ok) {
        throw new Error('failed loading env json');
@@ -20,11 +19,11 @@ fetch('./env.json')
      console.error('Error:', error);
    });
 
-console.log(`${envhost}:${serverport}/home/`);
+console.log(`${envhost}:${envport}/home/`);
 
 export async function getData(endpoint) {
-alert("Happening");
-    let response = await fetch(`${envhost}:${serverport}/home/` + endpoint);
+alert(`${envhost}:${envport}/home/${endpoint}`);
+    let response = await fetch(`${envhost}:${envport}/home/` + endpoint);
     console.log(response);
     if (response.ok) {
         console.log(response.body);
@@ -45,7 +44,7 @@ export async function postData(endpoint, data) {
     };
 
     try {
-    let response = await fetch(`${envhost}:${serverport}/home/` + endpoint, options);
+    let response = await fetch(`${envhost}:${envport}/home/` + endpoint, options);
     console.log('put response' + response.body);
     
     } catch (error) {
@@ -68,7 +67,7 @@ export async function putData(endpoint, data) {
     };
 
     try {
-        let response = await fetch(`${envhost}:${serverport}/home/` + endpoint, options);
+        let response = await fetch(`${envhost}:${envport}/home/` + endpoint, options);
         console.log('put response' + response.body);
 
         return response; // Return parsed JSON response

@@ -4,7 +4,7 @@ import { getData, postData } from "./requests.js";
 const body_1 = document.querySelector('.body');
 const body_2 = document.querySelector('.body-2');
 const teamview = document.querySelector('.teamview');
-alert("Working");
+
 export async function addTeamToView(teamindb, caller) {
 
     teamindb.forEach((data, i) => {
@@ -97,6 +97,7 @@ const handleSignIn = async() => {
     const correctCRentials = await getData('admin');
     console.log(correctCRentials);
 
+if((email !== '' && email !== undefined)  && (password != '' && password !== undefined)) {
     if (email.value.toLowerCase() === correctCRentials.email.toLowerCase() && password.value === correctCRentials.password) {
         const fromdb = await getData('team');
         console.log(fromdb)
@@ -118,5 +119,6 @@ const handleSignIn = async() => {
             
         })
     }
+  }
 }
 
