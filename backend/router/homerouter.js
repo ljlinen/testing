@@ -25,7 +25,8 @@ if(err) {
       console.log(err)
       res.status(400).send("ERROR OCCURED ON SERVER");
     } else {
-    res.status(200).send(homepage)
+        res.send("Home Requested");
+  //    res.status(200).send(homepage)
     }
 })
 
@@ -39,6 +40,7 @@ routerhome.get('/admin', async (req, res) => {
         const dbdata = await fetchData.fetchData('SELECT email, password FROM team WHERE name = "admin"');
         if (dbdata && dbdata.length > 0) {
             console.log('Data fetched:', dbdata);
+            console.log("updated code ran");
             res.status(200).json(dbdata[0]);
         } else {
             //console.log(dbdata)
