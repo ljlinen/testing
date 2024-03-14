@@ -18,7 +18,15 @@ routerhome.use(express.json());
 routerhome.use(express.urlencoded({ extended: true }));
 
 routerhome.get('/', (req, res) => {
+
+    console.log("homepage requested");
+    
+if(err) {
+      console.log(err)
+      res.status(400).send("ERROR OCCURED ON SERVER");
+    } else {
     res.status(200).send(homepage)
+    }
 })
 
 routerhome.get('/team', async (req, res) => {
