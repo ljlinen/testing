@@ -6,9 +6,9 @@ const fetchData = require('../db')
 const { deserializeData } = require('../global')
 
 
-routerhome.use(express.static(path.join(__dirname, '../../frontend')));
 const homepagepath = path.join(__dirname, '../../frontend/index.html')
 const homepage = fs.readFileSync(homepagepath, 'utf-8')
+routerhome.use(express.static(path.join(__dirname, '../../frontend')));
 
 let deleteData = null;
 let updateData = null;
@@ -17,25 +17,21 @@ let addData = null;
 routerhome.use(express.json());
 routerhome.use(express.urlencoded({ extended: true }));
 
-routerhome.get('/', (req, res) => {
+/*routerhome.get('/', (req, res) => {
 
-    console.log("homepage requested");
-    
-if(err) {
-      console.log(err)
-      res.status(400).send("ERROR OCCURED ON SERVER");
-    } else {
-        res.send("Home Requested");
-  //    res.status(200).send(homepage)
-    }
-})
-
+        console.log("Home Requested");
+        res.status(200).send(homepage);
+   
+});
+*/
 routerhome.get('/team', async (req, res) => {
     const dbdata = await fetchData.fetchData('SELECT * FROM team');
     res.status(200).send(dbdata)
 })
 
 routerhome.get('/admin', async (req, res) => {
+    console.log("admin requested");
+
     try {
         const dbdata = await fetchData.fetchData('SELECT email, password FROM team WHERE name = "admin"');
         if (dbdata && dbdata.length > 0) {
@@ -56,6 +52,8 @@ routerhome.get('/admin', async (req, res) => {
 
 
 routerhome.put('/team', async (req, res) => {
+
+   console.log("team requested");
 
     let result = 'members: ';
 
@@ -104,6 +102,7 @@ async function updateDataToDb(updateData) {
         return updatedRows + " updated";
     }
 
+routerhome.use(express.static(path.join(__dirname, '../../frontend')));
 
 async function addDataToDb(addData) {
   

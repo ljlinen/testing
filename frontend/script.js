@@ -4,7 +4,7 @@ import { getData, postData } from "./requests.js";
 const body_1 = document.querySelector('.body');
 const body_2 = document.querySelector('.body-2');
 const teamview = document.querySelector('.teamview');
-
+alert("Working");
 export async function addTeamToView(teamindb, caller) {
 
     teamindb.forEach((data, i) => {
