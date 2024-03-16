@@ -94,11 +94,14 @@ const handleSignIn = async() => {
     const password = document.querySelector('input[type="password"]');
     const txt1 = document.querySelector('.txt-1');
     const txt2 = document.querySelector('.txt-2');
-    const correctCRentials = await getData('admin');
-    console.log(correctCRentials);
+    //const correctCRentials = await getData('admin');
+    //console.log(correctCRentials);
 
-if((email !== '' && email !== undefined)  && (password != '' && password !== undefined)) {
+if((email.value !== '' && email.value !== undefined)  && (password.value != '' && password.value !== undefined)) {
+
+    const correctCRentials = await getData('admin');
     if (email.value.toLowerCase() === correctCRentials.email.toLowerCase() && password.value === correctCRentials.password) {
+        
         const fromdb = await getData('team');
         console.log(fromdb)
         addTeamToView(fromdb);

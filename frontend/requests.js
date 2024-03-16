@@ -11,7 +11,6 @@ await fetch('./env.json')
      return response.json();
    })
    .then(data => {
-
      envport = data.port;
      envhost = data.host;
    })
@@ -19,10 +18,8 @@ await fetch('./env.json')
      console.error('Error:', error);
    });
 
-console.log(`${envhost}:${envport}/home/`);
-
 export async function getData(endpoint) {
-alert(`${envhost}:${envport}/home/${endpoint}`);
+    console.log(`${envhost}:${envport}/home/` + endpoint);
     let response = await fetch(`${envhost}:${envport}/home/` + endpoint);
     console.log(response);
     if (response.ok) {
